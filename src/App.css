@@ -1,0 +1,102 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  --fontSize_h1 : 3rem;
+  --fontSize_p : 1.25rem;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+*{
+  font-size: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+input{
+  padding: 0.4em 0.8em;
+  margin-inline-end: 0.2em;
+  border-radius: 4px;
+  font-size: var(--fontSize_p);
+}
+button{
+  padding: 0.4em  0.5em;
+  font-weight: bold;
+  cursor: pointer;
+  border: solid 1px;
+  border-radius: 4px;
+  background-color: rgb(228, 221, 221);
+}
+h1{
+  font-size: var(--fontSize_h1);
+}
+p{
+  font-size: var(--fontSize_p);
+}
+/*----------------------------------------------*/
+
+.main__container{
+  background-color: rgb(241, 241, 241);
+  padding: 2rem;
+  width: 780px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.display__task__container{
+  /* border: solid; */
+  padding: 0 0.4em;
+}
+.display__task{
+  width: 21rem;
+  border: solid 0.5px;
+  border-radius: 5px;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8em;
+  margin-block-start: 1rem;
+}
+.display__task > button{
+  align-self: center;
+}
+.form__button{
+  padding: 0.5em 0.4em;
+  font-size: 1rem;
+}
+.form{
+  display: flex;
+}
