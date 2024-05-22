@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import Form from './Form'
+import Form from './Form';
+import Display from './Display';
 import './App.css'
 
 
@@ -33,14 +34,10 @@ function App() {
         handleChange = {handleChange}
         handleSubmit = {handleSubmit}
       />
-      <div className='display__task__container'>
-      {taskArray.map(task => 
-        <div className='display__task' key={task.id}>
-           <p>{task.text}</p>
-           <button onClick={() => handleClick(task.id)}>Remove</button>
-        </div>
-      )}
-      </div>
+      <Display
+        taskArray = {taskArray}
+        handleClick = {handleClick}
+      />
     </div>
   )
 
