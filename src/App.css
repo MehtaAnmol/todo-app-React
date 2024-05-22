@@ -67,16 +67,26 @@ p{
 
 .main__container{
   background-color: rgb(241, 241, 241);
+  border: solid;
+  width: 1250px;
+  min-height: 100vh;
   padding: 2rem;
-  width: 780px;
-  height: 100vh;
   margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+}
+.hero__container{
+  border: solid;
+  padding-inline: 0.8em;
+  padding-block-end: 1em;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
-.display__task__container{
+.display__task__container,
+.form{
   /* border: solid; */
   padding: 0 0.4em;
 }
@@ -86,12 +96,13 @@ p{
   border-radius: 5px;
   padding: 0.5em;
   display: flex;
-  justify-content: space-between;
   gap: 0.8em;
+  justify-content: space-between;
   margin-block-start: 1rem;
 }
-.display__task > button{
-  align-self: center;
+.display__task__button{
+  display: flex;
+  gap: 0.5em;
 }
 .form__button{
   padding: 0.5em 0.4em;
@@ -99,4 +110,13 @@ p{
 }
 .form{
   display: flex;
+}
+
+.status__container{
+  border: solid;
+  padding-inline: 0.8em;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
