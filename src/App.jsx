@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
+import Form from './Form'
 import './App.css'
 
 
@@ -27,10 +28,11 @@ function App() {
   return (
     <div className='main__container'>
       <h1>Todo App</h1>
-      <form onSubmit={handleSubmit} className='form'>
-        <input type="text" value={inputValue} onChange={handleChange} placeholder='Enter new Task'/>
-        <button className='form__button' type='submit'>Add</button>
-      </form>
+      <Form
+        inputValue = {inputValue}
+        handleChange = {handleChange}
+        handleSubmit = {handleSubmit}
+      />
       <div className='display__task__container'>
       {taskArray.map(task => 
         <div className='display__task' key={task.id}>
